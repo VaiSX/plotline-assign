@@ -27,7 +27,7 @@ const Form = () => {
   };
 
   return (
-    <div className='Container1'>
+    <div className='container1'>
     <form>
       <div>
         <label htmlFor="targetelem">Target Element:</label>
@@ -55,6 +55,7 @@ const Form = () => {
           onChange={handleChange}
         />
       </div>
+      <div style={{display:'flex'}}>
       <div> 
         <label htmlFor="texts">Text Size:</label>
         <input
@@ -74,6 +75,7 @@ const Form = () => {
           value={formData.padding}
           onChange={handleChange}
         />
+      </div>
       </div>
       <div> 
         <label htmlFor="textc">Text Colour:</label>
@@ -95,6 +97,7 @@ const Form = () => {
           onChange={handleChange}
         />
       </div>
+      <div style={{display:'flex'}}>
       <div> 
         <label htmlFor="radius">Corner Radius:</label>
         <input
@@ -114,7 +117,9 @@ const Form = () => {
           value={formData.Twidth}
           onChange={handleChange}
         />
+        </div>
       </div>
+      <div style={{display:'flex'}}>
       <div> 
         <label htmlFor="Awidth">Arrow Width:</label>
         <input
@@ -134,6 +139,7 @@ const Form = () => {
           value={formData.Aheight}
           onChange={handleChange}
         />
+      </div>
       </div>
     </form>
     </div>

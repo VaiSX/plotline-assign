@@ -1,13 +1,17 @@
 /* Form.css */
-.container{
-  background-color: #868686;
-  
+.container1{
+  display: flex;
+
+  border-radius: 20px;
+  background-color: #efecec;
+  height: 1000px;
+  width: 1000px;
+  align-content: space-between;
 }
 
 form {
     display: flex;
-    flex-direction: column;
-    max-width: 400px;
+    flex-direction: column; 
   }
   
   label {
