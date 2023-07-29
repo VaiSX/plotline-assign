@@ -55,7 +55,7 @@ const Form = () => {
           onChange={handleChange}
         />
       </div>
-      <div style={{display:'flex'}}>
+      <div style={{display:'flex' , gap:'50px'}}>
       <div> 
         <label htmlFor="texts">Text Size:</label>
         <input
@@ -97,7 +97,7 @@ const Form = () => {
           onChange={handleChange}
         />
       </div>
-      <div style={{display:'flex'}}>
+      <div style={{display:'flex',gap:'50px'}}>
       <div> 
         <label htmlFor="radius">Corner Radius:</label>
         <input
@@ -119,7 +119,7 @@ const Form = () => {
         />
         </div>
       </div>
-      <div style={{display:'flex'}}>
+      <div style={{display:'flex',gap:'50px'}}>
       <div> 
         <label htmlFor="Awidth">Arrow Width:</label>
         <input
