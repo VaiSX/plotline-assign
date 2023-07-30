@@ -4,15 +4,15 @@ import './Options.css';
 
 
 const Form = () => {
-  const [targetButton,setTarget] = useState({
+  const [button,setButton] = useState({
     buttonName:'Button1',
   })
   const [formData, setFormData] = useState({
-    tooltiptxt: '',
+    tooltiptxt: 'ABC',
     texts: '',
     padding:'',
     textc:'',
-    backgroud:'',
+    background:'',
     radius:'',
     Twidth:'',
     Awidth:'',
@@ -26,8 +26,8 @@ const Form = () => {
 
   const handleChange2 = (event) =>{
     const { name, value } = event.target;
-    setTarget(value);
-    console.log(value);
+    setButton(value);
+    console.log(button);
   };
 
   return (
@@ -43,7 +43,7 @@ const Form = () => {
           type="text"
           id="buttonName"
           name="buttonName"
-          value={targetButton.buttonName}
+          value={button.buttonName}
           onChange={handleChange2}
         >
           <option value="Button1">Button 1</option>
@@ -101,7 +101,7 @@ const Form = () => {
           type="text"
           id="background"
           name="background"
-          value={formData.backgroud}
+          value={formData.background}
           onChange={handleChange}
         />
       </div>

@@ -6,12 +6,9 @@ import "./App.css";
 
 const App = () => {
   return (
-    <>
     <div className='main'>  
        <Options/>
-       <Screen className="screen"/>
     </div>
-    </>
   );
 };
 
