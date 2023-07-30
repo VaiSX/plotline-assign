@@ -1,8 +1,8 @@
 import React from 'react';
+import "./tooltip.css"
 
 const Tooltip = (props) => {
   const propData  = props.props;
-
   const color = propData.textc;
   const ts = propData.texts;
   const p = propData.padding;
@@ -20,10 +20,10 @@ const Tooltip = (props) => {
     width:tw,
     fontSize:ts,
   };
+
   return (
-    <div style={inlineStyles}>
-      <h2>{propData.tooltiptxt}</h2>
-      <h2>{propData.background}</h2>
+    <div className="tool {inlineStyles}" style={inlineStyles}>
+      <h2>{propData.tooltiptxt || 'Hi this is a Tooltip'} </h2>
     </div>
   );
 };

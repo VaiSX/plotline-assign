@@ -1,13 +1,42 @@
 /* Form.css */
 .container1{
   display: flex;
-  
   border-radius: 20px;
   background: var(--grey-200, #F5F5F5);
   height: 1000px;
   width: 1000px;
   align-content: space-between;
+}
 
+.B1{
+  position: absolute; 
+  top: 7% ;
+  left: 7%;
+  
+}
+.B2{
+  position: absolute; 
+  top: 7% ;
+  right: 7%;
+  overflow: auto;
+}
+.B3{
+  position: absolute; 
+  top:55%;
+  left:30%;
+  overflow: auto;
+}
+.B4{
+  position: absolute; 
+  bottom: 7% ;
+  left: 7%;
+  overflow: auto;
+}
+.B5{
+  position: absolute; 
+  bottom: 7% ;
+  right: 7%;
+  overflow: auto;
 }
 
 form {
@@ -25,7 +54,6 @@ form {
     margin-bottom: 8px;
   }
   
-
   
 input,
 select {
@@ -36,6 +64,35 @@ select {
   width: 400px;
   height: 40px;
 }
+
+.mobile-screen {
+  position: relative;
+  border-radius: 28.864px;
+  background: grey;
+  box-shadow: -1.6781489849090576px 0px 4.027557849884033px -2.517223834991455px #212121 inset, 0px -0.8390744924545288px 3.3562979698181152px 0px #212121 inset;
+  width: 500px;
+  height: 1000px;
+  flex-shrink: 0;
+  border-width: 30px;
+  border-color: black!important;
+  }
+
+  button{
+    position: absolute;
+    display: flex;
+    padding: 8px;
+    gap: 10px;
+    border-radius: 4px;
+    background: #FFF;
+    font-weight: bold;
+  }
+
+
+
+  
+  
+  
+  
 
 
   

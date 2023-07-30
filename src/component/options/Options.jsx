@@ -1,14 +1,20 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Tooltip from '../tooltip/Tooltip';
 import './Options.css';
 
+const center = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  textAlign: 'center',
+};
 
 const Form = () => {
-  const [button,setButton] = useState({
-    buttonName:'Button1',
-  })
+  const [button,setButton] = useState('B2');
+
   const [formData, setFormData] = useState({
-    tooltiptxt: 'ABC',
+    tooltiptxt: '',
     texts: '',
     padding:'',
     textc:'',
@@ -31,10 +37,8 @@ const Form = () => {
   };
 
   return (
-   <>
-   <div>
-     <Tooltip props={formData}/>
-   </div>
+    <>
+    
     <div className='container1'>
     <form>
       <div>
@@ -46,11 +50,11 @@ const Form = () => {
           value={button.buttonName}
           onChange={handleChange2}
         >
-          <option value="Button1">Button 1</option>
-          <option value="Button2">Button 2</option>
-          <option value="Button3">Button 3</option>
-          <option value="Button4">Button 4</option>
-          <option value="Button5">Button 5</option>
+          <option value="B1">Button 1</option>
+          <option value="B2">Button 2</option>
+          <option value="B3">Button 3</option>
+          <option value="B4">Button 4</option>
+          <option value="B5">Button 5</option>
         </select>
       </div>
       <div> 
@@ -151,6 +155,18 @@ const Form = () => {
       </div>
     </form>
     </div>
+
+    <div className="mobile-screen">
+      <div className={button}>
+      <Tooltip props={formData}/>
+      </div>
+    <button className="" style={{top:20,left:20}}>Button 1</button>
+    <button className="" style={{right:20 ,top:20}}>Button 2</button>
+    <button className="" style={center}>Button 3</button>
+    <button className="" style={{bottom:20,left:20}}>Button 4</button>
+    <button className="" style={{bottom:20,right:20}}>Button 5</button>
+    </div>
+
     </>
   );
 };
