@@ -20,12 +20,6 @@ const Form = () => {
     setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // You can perform form submission or validation logic here
-    console.log('Form data:', formData);
-  };
-
   return (
     <div className='container1'>
     <form>
