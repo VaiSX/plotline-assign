@@ -13,7 +13,7 @@ const Tooltip = ({ content, children }) => {
 
   return (
     <div
-      className="tooltip-container"
+      style={{}}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >

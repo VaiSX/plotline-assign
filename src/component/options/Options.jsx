@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
+import Tooltip from '../tooltip/Tooltip';
 import './Options.css';
 
+
 const Form = () => {
+  const [targetButton,setTarget] = useState({
+    buttonName:'Button1',
+  })
   const [formData, setFormData] = useState({
-    targetelem: '',
     tooltiptxt: '',
     texts: '',
     padding:'',
@@ -20,17 +24,27 @@ const Form = () => {
     setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
   };
 
+  const handleChange2 = (event) =>{
+    const { name, value } = event.target;
+    setTarget(value);
+    console.log(value);
+  };
+
   return (
+   <>
+   <div>
+     <Tooltip props={formData}/>
+   </div>
     <div className='container1'>
     <form>
       <div>
-        <label htmlFor="targetelem">Target Element:</label>
+        <label htmlFor="buttonName">Target Element:</label>
         <select
           type="text"
-          id="targetelem"
-          name="targetelem"
-          value={formData.targetelem}
-          onChange={handleChange}
+          id="buttonName"
+          name="buttonName"
+          value={targetButton.buttonName}
+          onChange={handleChange2}
         >
           <option value="Button1">Button 1</option>
           <option value="Button2">Button 2</option>
@@ -137,6 +151,7 @@ const Form = () => {
       </div>
     </form>
     </div>
+    </>
   );
 };
 
