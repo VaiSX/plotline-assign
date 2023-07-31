@@ -1,8 +1,18 @@
 .tool{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
     border-radius: 10px;
     width: 200px;
     text-align: center;
     background-color: black;
     padding: 8px;
+}
+
+img{
+    height: 18%;
+    width: 18%;
+    object-fit: contain ;
+    padding-right: 5px;
 }

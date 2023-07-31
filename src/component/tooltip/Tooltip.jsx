@@ -1,28 +1,26 @@
 import React from 'react';
-import "./tooltip.css"
+import "./tooltip.css" ;
+import alert from "./../../images/alert-icon.png"
 
 const Tooltip = (props) => {
   const propData  = props.props;
-  const color = propData.textc;
-  const ts = propData.texts;
-  const p = propData.padding;
-  const bg = propData.background;
-  const r = propData.radius;
-  const tw = propData.Twidth;
+
   const Aw = propData.Awidth;
   const Ah = propData.Aheight;
   
   const inlineStyles = {
-    color: color,
-    background: bg,
-    padding:p,
-    borderRadius:r,
-    width:tw,
-    fontSize:ts,
+    color: propData.textc,
+    background: propData.background,
+    padding: propData.padding,
+    borderRadius: propData.radius,
+    width: propData.Twidth,
+    fontSize:propData.texts,
   };
 
+
   return (
-    <div className="tool {inlineStyles}" style={inlineStyles}>
+    <div className="tool" style={inlineStyles}>
+      <img src={alert}/>
       <h2>{propData.tooltiptxt || 'Hi this is a Tooltip'} </h2>
     </div>
   );

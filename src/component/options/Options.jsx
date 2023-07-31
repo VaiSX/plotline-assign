@@ -10,35 +10,42 @@ const center = {
   textAlign: 'center',
 };
 
+//Map of objects
+
+const cssMap = new Map();
+
+//FORM
+
 const Form = () => {
-  const [button,setButton] = useState('B2');
+  const [button,setButton] = useState('B3');
 
   const [formData, setFormData] = useState({
-    tooltiptxt: '',
-    texts: '',
-    padding:'',
-    textc:'',
-    background:'',
-    radius:'',
-    Twidth:'',
-    Awidth:'',
-    Aheight:''
+    tooltiptxt: 'ToolTip',
+    texts: '10px',
+    padding:'5px',
+    textc:'white',
+    background:'black',
+    radius:'10px',
+    Twidth:'100px',
+    Awidth:'3px',
+    Aheight:'0px'
   });
 
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
+    cssMap.set(button,{...formData});
+    console.log(cssMap.get(button));
   };
 
   const handleChange2 = (event) =>{
     const { name, value } = event.target;
     setButton(value);
-    console.log(button);
   };
 
   return (
     <>
-    
+                                                {/* FORM */}
     <div className='container1'>
     <form>
       <div>
@@ -49,6 +56,8 @@ const Form = () => {
           name="buttonName"
           value={button.buttonName}
           onChange={handleChange2}
+          style={{width:660}}
+
         >
           <option value="B1">Button 1</option>
           <option value="B2">Button 2</option>
@@ -65,6 +74,7 @@ const Form = () => {
           name="tooltiptxt"
           value={formData.tooltiptxt}
           onChange={handleChange}
+          style={{width:660}}
         />
       </div>
       <div style={{display:'flex' , gap:'50px'}}>
@@ -97,6 +107,7 @@ const Form = () => {
           name="textc"
           value={formData.textc}
           onChange={handleChange}
+          style={{width:660}}
         />
       </div>
       <div> 
@@ -107,6 +118,7 @@ const Form = () => {
           name="background"
           value={formData.background}
           onChange={handleChange}
+          style={{width:660}}
         />
       </div>
       <div style={{display:'flex',gap:'50px'}}>
@@ -155,6 +167,9 @@ const Form = () => {
       </div>
     </form>
     </div>
+
+
+    {/* SCREEN */}
 
     <div className="mobile-screen">
       <div className={button}>
