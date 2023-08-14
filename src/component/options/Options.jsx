@@ -26,7 +26,7 @@ const Form = () => {
     textc:'white',
     background:'black',
     radius:'10px',
-    Twidth:'100px',
+    Twidth:'150px',
     Awidth:'3px',
     Aheight:'0px'
   });
